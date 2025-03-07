@@ -8,10 +8,12 @@ obterDataAtual(data);
 function obterHoraAtual(data){
     if(data.getSeconds() < 10){
         console.log(`0${data.getHours() - 3}:${data.getMinutes()}:0${data.getSeconds()}`);
+    }else if (data.getMinutes() < 10) {
+    console.log(`0${data.getHours() - 3}:0${data.getMinutes()}:${data.getSeconds()}`);
+    }else if (data.getSeconds() < 10 && data.getMinutes() < 10){
+        console.log(`0${data.getHours() - 3}:0${data.getMinutes()}:0${data.getSeconds()}`);
     }else {
-    console.log(`0${data.getHours() - 3}:${data.getMinutes()}:${data.getSeconds()}`);
+        console.log(`0${data.getHours() - 3}:${data.getMinutes()}:${data.getSeconds()}`);
     }
 }
 obterHoraAtual(data);
-
-
