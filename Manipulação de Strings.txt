@@ -1,0 +1,32 @@
+let texto = prompt("Digite uma frase: ")
+
+function contarLetras(texto){
+    textoSemEspaco = texto.replace(/ /g,"")
+    console.log(textoSemEspaco.length)
+}
+
+contarLetras(texto);
+
+
+let texto = prompt("Digite uma frase: ")
+
+function inverterString(texto){
+    console.log(texto.split("").reverse().join(""));
+}
+
+inverterString(texto);
+
+
+let texto = prompt("Digite uma frase: ")
+
+function ehPalindromo(texto){
+    textoMinusculo = texto.toLowerCase()
+    textoSemEspaco = textoMinusculo.replace(/ /g,"");
+    if (textoSemEspaco == textoSemEspaco.split("").reverse().join("")){
+        console.log(texto + " é palíndromo");
+    }else {
+        console.log(texto + " não é palíndromo");
+    }
+}
+
+ehPalindromo(texto);
