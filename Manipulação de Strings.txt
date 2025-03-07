@@ -1,7 +1,7 @@
 let texto = prompt("Digite uma frase: ")
 
 function contarLetras(texto){
-    textoSemEspaco = texto.replace(/ /g,"")
+    textoSemEspaco = texto.replace(/\s/g,"")
     console.log(textoSemEspaco.length)
 }
 
@@ -21,7 +21,7 @@ let texto = prompt("Digite uma frase: ")
 
 function ehPalindromo(texto){
     textoMinusculo = texto.toLowerCase()
-    textoSemEspaco = textoMinusculo.replace(/ /g,"");
+    textoSemEspaco = textoMinusculo.replace(/\s/g,"");
     if (textoSemEspaco == textoSemEspaco.split("").reverse().join("")){
         console.log(texto + " é palíndromo");
     }else {
