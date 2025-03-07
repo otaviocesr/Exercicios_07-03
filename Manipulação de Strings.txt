@@ -23,9 +23,9 @@ function ehPalindromo(texto){
     textoMinusculo = texto.toLowerCase()
     textoSemEspaco = textoMinusculo.replace(/\s/g,"");
     if (textoSemEspaco == textoSemEspaco.split("").reverse().join("")){
-        console.log(texto + " é palíndromo");
+        console.log(`${texto} é um palíndromo`);
     }else {
-        console.log(texto + " não é palíndromo");
+        console.log(`${texto} não é palíndromo`);
     }
 }
 
