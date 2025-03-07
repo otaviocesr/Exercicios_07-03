@@ -20,16 +20,19 @@ console.log(Math.random() * (max - min + 1) + min);
 gerarNumeroAleatorio(min, max);
 
 
+
 let n = parseInt(prompt(console.log("Digite um valor para ver o fatorial: ")));
 let somaF = 1;
 
 function calcularFatorial(n, somaF){
+    if (n < 0){
+        console.log("Erro, insira um número válido")
+    } else {
     for (let i = n; i > 1; i-- ){
         somaF *= i
     }
-    console.log(somaF)
+        console.log(somaF)
+    }
 }
 
 calcularFatorial(n, somaF);
-
-
