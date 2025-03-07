@@ -1,19 +1,21 @@
 let data = new Date();
 
 function obterDataAtual(data){
-    console.log(data.toLocaleDateString("pt-BR"));
+    return data.toLocaleDateString("pt-BR");
 }
-obterDataAtual(data);
+console.log(obterDataAtual(data));
 
 function obterHoraAtual(data){
-    if(data.getSeconds() < 10){
-        console.log(`0${data.getHours() - 3}:${data.getMinutes()}:0${data.getSeconds()}`);
+    if(data.getHours() < 10){
+        return `0${data.getHours() - 3}:${data.getMinutes()}:${data.getSeconds()}`;
+    }else if(data.getSeconds() < 10){
+        return `${data.getHours() - 3}:${data.getMinutes()}:0${data.getSeconds()}`;
     }else if (data.getMinutes() < 10) {
-    console.log(`0${data.getHours() - 3}:0${data.getMinutes()}:${data.getSeconds()}`);
+    return `0${data.getHours() - 3}:0${data.getMinutes()}:${data.getSeconds()}`;
     }else if (data.getSeconds() < 10 && data.getMinutes() < 10){
-        console.log(`0${data.getHours() - 3}:0${data.getMinutes()}:0${data.getSeconds()}`);
+        return `0${data.getHours() - 3}:0${data.getMinutes()}:0${data.getSeconds()}`;
     }else {
-        console.log(`0${data.getHours() - 3}:${data.getMinutes()}:${data.getSeconds()}`);
+        return `0${data.getHours() - 3}:${data.getMinutes()}:${data.getSeconds()}`;
     }
 }
-obterHoraAtual(data);
+console.log(obterHoraAtual(data));
